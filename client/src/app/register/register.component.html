@@ -21,12 +21,6 @@
     <app-text-input [label]='"Password"' [formControl]="password" [type]="'password'" ngDefaultControl></app-text-input>
     <app-text-input [label]='"Confirm Password"' [formControl]="confirmPassword" [type]="'password'" ngDefaultControl ></app-text-input>
 
-    <!-- <app-text-input [formControl]! ='registerForm.controls["password"]']
-     [label]?='"Password"' [type]='"password"'></app-text-input>
-     
-    <app-text-input [formControl]! ='registerForm.controls["confirmPassword"]']
-     [label]?='"Confirm Password"' [type]?='"password"'></app-text-input> -->
-
      <div class="row" *ngIf="validationErrors.length > 0">
         <ul class="text-danger">
             <li *ngFor="let error of validationErrors">
@@ -40,8 +34,3 @@
         <button class="btn btn-default mr-2" style="background-color:lightgray;" (click)="cancel()" type="button">Cancel</button>
     </div>
 </form>
-
-<p>
-    Form Value: {{registerForm.value | json}}
-    Form Status: {{registerForm.status| json}}
-</p>
